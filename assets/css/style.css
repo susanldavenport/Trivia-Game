@@ -10,6 +10,7 @@ body{
 h1{
     font-size: 57px;
     color: yellow;
+    /* TODO: try to animate text coming down from top of screen */
 }
 
 h2{
@@ -23,17 +24,27 @@ h2{
     
 }
 
+#timerSection{
+    box-sizing: border-box;
+    padding 20px;
+}
+
 p{
     text-align: center;
     color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#timerSection{
-    
-}
-
 #box-1{
     box-sizing: border-box;
     margin: 0 280px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+#answer{
+    padding: 15px 0;
+    line-height: 5em;
 }
