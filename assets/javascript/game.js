@@ -24,7 +24,7 @@ var correctAnswers = [
 '1965'
 ];
 
-var timer = 5;
+var timer = 20;
 var userGuess;
 var userCorrect = 0;
 var userIncorrect = 0;
@@ -86,12 +86,11 @@ $("#mainArea").on("click", ".start-button", function(event){
   });// Close .answer click
 
   $("body").on("click", ".reset-button", function(event){
-    // clickSound.play();
     resetGame();
 }); // Closes reset-button click
 
 function generateQuestions() {
-  gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>30</span></p><p class='text-center'>" + questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
+  gameHTML = questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + answerArray[questionCounter][0] + "</p><p class='answer'>B. "+answerArray[questionCounter][1]+"</p><p class ='answer'>C. "+answerArray[questionCounter][2]+"</p><p class='answer'>D. "+answerArray[questionCounter][3]+"</p>";
   $("#mainArea").html(gameHTML);
 }; //end generate question
 
@@ -112,11 +111,10 @@ function generateLoss() {
 //end generate loss
 
 function wait() {
-  //ternary operator replacing if/else for generate more questions
-questionCounter < 7 ? 
+  questionCounter < 7 ? 
   (questionCounter++,
   generateQuestions(),
-  counter = 30,
+  counter = 20,
   twentySeconds() ):
   
  (finalScreen())
